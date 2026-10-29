@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Go-to-market strategy generator (made up)</title>
+<meta name="description" content="Type a product name and one line about it. Get a consultant-grade go-to-market plan with a $4.2 trillion TAM, a 2x2 you win, and a 90-day plan that is almost entirely filler. All of it made up.">
+<link rel="stylesheet" href="/assets/site.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="inner">
+    <a class="brand" href="/">GTM <span>Strategy</span> Generator</a>
+    <span class="site-tam" id="tam" title="Computed from today's date, like most TAMs">Our TAM: …</span>
+    <nav><a href="/frameworks">Frameworks</a><a href="#why">Why</a></nav>
+  </div>
+</header>
+
+<main>
+  <p class="eyebrow">CONSULTANT-GRADE*</p>
+  <h1>A go-to-market strategy in under a second.</h1>
+  <p class="lede">Type your product and one line about it. You get the deck a consultant would bill you six weeks for, built on the same amount of research.
+    <small>*No grade was given. The plan is made up by a random number generator, seeded from what you type, so the link always rebuilds the same deck.</small></p>
+
+  <form class="controls" id="form" aria-label="Describe your product">
+    <label><b>Product name</b>
+      <input type="text" id="name" maxlength="32" autocomplete="off" spellcheck="false">
+    </label>
+    <label><b>One line about it</b>
+      <input type="text" id="desc" maxlength="90" autocomplete="off">
+    </label>
+    <div class="buttons">
+      <button class="primary" type="submit">Generate my strategy</button>
+      <button type="button" id="reroll">Ask a different consultant</button>
+      <button type="button" id="copy-link">Copy link to this deck</button>
+    </div>
+  </form>
+
+  <div class="deck" id="plan-start">
+    <section>
+      <div class="slide-head"><h2><small>COVER</small>The deck</h2><button type="button" data-download="cover">Download slide</button></div>
+      <div class="stage"><canvas id="slide-cover" width="1600" height="900" role="img" aria-label="Cover slide"></canvas></div>
+    </section>
+
+    <section>
+      <div class="slide-head"><h2><small>01</small>Market sizing</h2><button type="button" data-download="tam">Download slide</button></div>
+      <div class="stage"><canvas id="slide-tam" width="1600" height="900" role="img" aria-label="TAM, SAM and SOM funnel"></canvas></div>
+      <p class="caption">The total addressable market is measured in trillions, because the alternative is measuring it.</p>
+    </section>
+
+    <section>
+      <div class="slide-head"><h2><small>02</small>Ideal customer profile</h2><button type="button" data-download="icp">Download slide</button></div>
+      <div class="stage"><canvas id="slide-icp" width="1600" height="900" role="img" aria-label="Ideal customer profile: everyone, but especially people."></canvas></div>
+      <p class="caption">Narrowing the ICP is how you lose deals to people you didn't target. So don't.</p>
+    </section>
+
+    <section>
+      <div class="slide-head"><h2><small>03</small>Competitive landscape</h2><button type="button" data-download="matrix">Download slide</button></div>
+      <div class="stage"><canvas id="slide-matrix" width="1600" height="900" role="img" aria-label="A 2x2 matrix"></canvas></div>
+      <p class="caption">Pick two axes. Put yourself top right. Put everyone else anywhere else. That's the method.</p>
+    </section>
+
+    <section>
+      <div class="slide-head"><h2><small>04</small>Personas</h2><button type="button" data-download="personas">Download slide</button></div>
+      <div class="stage"><canvas id="slide-personas" width="1600" height="900" role="img" aria-label="Three made-up buyer personas, drawn as simple shapes and watermarked NOT A REAL PERSON."></canvas></div>
+      <p class="caption">Three buyers who exist in the way stock photos exist. Laughing, pointing, holding a mug near a window.</p>
+    </section>
+
+    <section>
+      <div class="slide-head"><h2><small>05</small>Pricing strategy</h2><button type="button" data-download="pricing">Download slide</button></div>
+      <div class="stage"><canvas id="slide-pricing" width="1600" height="900" role="img" aria-label="Pricing strategy: charge less. No, more. Three tiers."></canvas></div>
+      <p class="caption">Three tiers. The left one makes the middle one look reasonable. The right one makes it look cheap.</p>
+    </section>
+
+    <section>
+      <div class="slide-head"><h2><small>06</small>The 90-day plan</h2><button type="button" data-download="plan">Download slide</button></div>
+      <div class="stage">
+        <canvas id="slide-plan" width="1600" height="900" role="img" aria-label="A 90-day plan"></canvas>
+        <a class="real-link" id="real-link" href="https://merge.tel" title="Tell your customers what you shipped, on merge.tel"><span class="sr">Tell your customers what you shipped, on merge.tel</span></a>
+      </div>
+      <p class="caption">Twelve workstreams. Eleven are meetings about the other workstreams. The highlighted one is real, and <a href="https://merge.tel">merge.tel</a> does it for you every time you merge.</p>
+    </section>
+  </div>
+
+  <h2 class="section-title">Post it</h2>
+  <p class="section-lede">A launch post in the house style of people who say "agree?" at the end.</p>
+  <pre id="post"></pre>
+  <div class="buttons" style="margin-top:12px"><button type="button" id="copy-post">Copy the post</button></div>
+
+  <h2 class="section-title">Framework of the week</h2>
+  <p class="section-lede">A brand new strategic framework, invented every Monday by a script and merged by a bot. Use it in a meeting. Nobody will ask.</p>
+  <div id="fw-latest"><p class="fw-meta">Loading this week's framework…</p></div>
+
+  <p class="fine">Nothing on this page is advice. Every number, persona, quote and framework is made up, and each slide says so in its footer. The people are shapes.</p>
+
+  <footer class="john" id="why">
+    <h2>Why this exists</h2>
+    <p>I spent years in enterprise software watching strategy decks get made. Every one had a 2x2 with the company alone in the top right, and nobody ever asked who picked the axes. It was the company.</p>
+    <p>The 90-day plan was always the best part. Twelve workstreams, and the only one that did anything was telling customers what shipped. That's the one I kept skipping. Merging was fine. Saying it out loud was the hard part.</p>
+    <p>I use <a href="https://merge.tel">merge.tel</a> every day to promote merge.tel and my other projects, this one included. It turns merged pull requests into posts and customer updates, so the telling happens whether I feel brave that day or not.</p>
+    <p>This site invents a framework every Monday and merges it, so it gets posts too.</p>
+  </footer>
+</main>
+
+<script src="/assets/common.js"></script>
+<script src="/assets/app.js"></script>
+<script src="/assets/frameworks.js"></script>
+<script>window.GTMFrameworks.mountLatest(document.getElementById('fw-latest'));</script>
+</body>
+</html>

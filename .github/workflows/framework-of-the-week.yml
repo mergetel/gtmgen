@@ -1,0 +1,58 @@
+name: Framework of the week
+
+# Every Monday a script invents a framework, appends it to data/frameworks.json,
+# opens a PR titled with its name, and merges it.
+on:
+  schedule:
+    - cron: '17 15 * * 1'
+  workflow_dispatch:
+    inputs:
+      force:
+        description: 'Invent another one even if this week already has one'
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: framework-of-the-week
+  cancel-in-progress: false
+
+jobs:
+  invent:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Invent a framework
+        id: gen
+        env:
+          FORCE: ${{ inputs.force && '1' || '0' }}
+          PR_BODY_FILE: ${{ runner.temp }}/pr-body.md
+        run: node scripts/new-framework.mjs
+
+      - name: Open the PR and merge it
+        if: steps.gen.outputs.created == 'true'
+        env:
+          # BOT_TOKEN is optional. Without it the default token opens and merges the PR,
+          # which needs "Allow GitHub Actions to create and approve pull requests" on.
+          GH_TOKEN: ${{ secrets.BOT_TOKEN || github.token }}
+          NAME: ${{ steps.gen.outputs.name }}
+          SLUG: ${{ steps.gen.outputs.slug }}
+          BODY: ${{ runner.temp }}/pr-body.md
+        run: |
+          branch="framework/${SLUG}-$(date -u +%Y%m%d%H%M)"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git switch -c "$branch"
+          git add data/frameworks.json
+          git commit -m "Framework of the week: ${NAME}"
+          git push -u origin "$branch"
+          gh pr create --base main --head "$branch" --title "$NAME" --body-file "$BODY"
+          gh pr merge "$branch" --squash --delete-branch

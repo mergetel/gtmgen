@@ -45,14 +45,18 @@ Then open http://localhost:8000.
 
 ## Deploy
 
-On Netlify, create a site from this repo. `netlify.toml` already says what to do: no build command, publish the repo root. It also sets a short cache on `/data/*` so the weekly framework shows up quickly, and hides `/scripts/`.
+GitHub Pages serves the site. `.github/workflows/pages.yml` publishes the repo root on every push to `main` and after every framework-of-the-week run. The bot's merges use the default token, and pushes made with it don't start other workflows, so the deploy also listens for the framework workflow finishing.
+
+To turn it on, go to Settings, Pages, and set Source to "GitHub Actions". The site is then at https://mergetel.github.io/gtmgen/.
+
+Every link and fetch in the pages is relative, so the site works under `/gtmgen/` now and at the root of a custom domain later. `404.html` is the exception, because GitHub serves it for a missing path at any depth. It works out the root from the URL instead.
 
 ## Set the domain
 
 The domain is still being bought. When it is, two things change:
 
 1. In `assets/common.js`, set `SITE` to the new domain. That constant is the only place the domain lives, and it's what every slide prints in its footer. Until then it says merge.tel.
-2. In Netlify, add the domain under Domain management.
+2. In Settings, Pages, enter it under Custom domain, and point the domain's DNS at GitHub Pages. A Pages site deployed by a workflow doesn't need a `CNAME` file.
 
 ## Rules for this site
 

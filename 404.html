@@ -4,13 +4,27 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Page not found (made up)</title>
-<link rel="stylesheet" href="/assets/site.css">
+<style>
+  body { margin: 0; background: #eef0f4; color: #1f2937; font: 16px/1.55 ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+  main { max-width: 1180px; margin: 0 auto; padding: 36px 16px 64px; }
+  .eyebrow { display: inline-block; margin: 0 0 12px; padding: 4px 10px; border-radius: 999px; background: #ffd84d; color: #111; font-weight: 800; font-size: 13px; letter-spacing: .06em; }
+  h1 { margin: 0 0 10px; color: #0f1b3d; font: 700 clamp(32px, 6vw, 58px)/1.05 Georgia, "Times New Roman", serif; }
+  p { color: #5f6673; font-size: 18px; max-width: 680px; }
+  a { color: #0f8a7e; }
+</style>
 </head>
 <body>
 <main>
   <p class="eyebrow">404</p>
   <h1>This page was descoped.</h1>
-  <p class="lede">It was on the 90-day plan. So was everything else. <a href="/">Go make a strategy</a> instead.</p>
+  <p>It was on the 90-day plan. So was everything else. <a id="home" href="/">Go make a strategy</a> instead.</p>
 </main>
+<script>
+  // This page is served for a missing path at any depth, so relative links can't work.
+  // On a github.io project site the root is the first path segment.
+  if (location.hostname.endsWith('.github.io')) {
+    document.getElementById('home').href = '/' + location.pathname.split('/')[1] + '/';
+  }
+</script>
 </body>
 </html>

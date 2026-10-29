@@ -2,6 +2,9 @@
 // and draws either the latest framework (homepage) or all of them (/frameworks).
 (function () {
   const { drawFramework, downloadCanvas, W, H } = window.GTM;
+  // The site root, worked out from this script's own URL, so the pages work at / and
+  // under a GitHub Pages project path like /gtmgen/.
+  const ROOT = new URL('..', document.currentScript.src);
 
   function card(fw, { headingTag, linkToCatalogue }) {
     const wrap = document.createElement('article');
@@ -37,7 +40,10 @@
     wrap.append(head, stage, meta, body);
     if (linkToCatalogue) {
       const more = document.createElement('p');
-      more.innerHTML = '<a href="/frameworks">Every framework so far</a>';
+      const a = document.createElement('a');
+      a.href = new URL('frameworks/', ROOT).href;
+      a.textContent = 'Every framework so far';
+      more.append(a);
       wrap.append(more);
     }
 
@@ -47,7 +53,7 @@
   }
 
   async function load() {
-    const res = await fetch('/data/frameworks.json', { cache: 'no-cache' });
+    const res = await fetch(new URL('data/frameworks.json', ROOT), { cache: 'no-cache' });
     if (!res.ok) throw new Error(`data/frameworks.json answered ${res.status}`);
     const list = await res.json();
     if (!Array.isArray(list)) throw new Error('data/frameworks.json is not a list');

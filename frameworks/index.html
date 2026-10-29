@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Every framework so far (made up)</title>
+<meta name="description" content="The back catalogue of strategic frameworks, one invented every week by a script. Each has its own 2x2. None of them work.">
+<link rel="stylesheet" href="/assets/site.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="inner">
+    <a class="brand" href="/">GTM <span>Strategy</span> Generator</a>
+    <span class="site-tam" id="tam" title="Computed from today's date, like most TAMs">Our TAM: …</span>
+    <nav><a href="/">Generator</a><a href="#why">Why</a></nav>
+  </div>
+</header>
+
+<main>
+  <p class="eyebrow">THE BACK CATALOGUE</p>
+  <h1>Every framework so far.</h1>
+  <p class="lede">A script invents one every Monday and a bot merges it. Newest first. Each one is a 2x2 and some stages, which is what a framework is.</p>
+
+  <div id="fw-all"><p class="fw-meta">Loading the frameworks…</p></div>
+
+  <footer class="john" id="why">
+    <h2>Why this exists</h2>
+    <p>Every consultancy I worked near had a named framework, and every framework was a 2x2 with a loop drawn on it. So a script makes one a week now. It's about as rigorous.</p>
+    <p>Each new one lands as a merged pull request, and <a href="https://merge.tel">merge.tel</a> turns that merge into a post. I built it so the stuff I make gets announced even on days I'd rather not. Apparently that includes this.</p>
+  </footer>
+</main>
+
+<script src="/assets/common.js"></script>
+<script src="/assets/frameworks.js"></script>
+<script>
+  window.GTM.mountTam(document.getElementById('tam'));
+  window.GTMFrameworks.mountAll(document.getElementById('fw-all'));
+</script>
+</body>
+</html>

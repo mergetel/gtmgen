@@ -1,0 +1,43 @@
+[
+  {
+    "week": "2026-W44",
+    "date": "2026-10-28",
+    "name": "The SPARK-10 Canvas",
+    "slug": "spark-10-canvas",
+    "kind": "acronym",
+    "steps": [
+      {
+        "letter": "S",
+        "word": "Scale"
+      },
+      {
+        "letter": "P",
+        "word": "Pivot"
+      },
+      {
+        "letter": "A",
+        "word": "Activate"
+      },
+      {
+        "letter": "R",
+        "word": "Roadmap"
+      },
+      {
+        "letter": "K",
+        "word": "Keynote"
+      }
+    ],
+    "axes": {
+      "x": "Aura",
+      "y": "Velocity"
+    },
+    "quadrants": {
+      "tl": "Dreamers",
+      "tr": "Inevitable",
+      "bl": "Busywork",
+      "br": "Headless chickens"
+    },
+    "explainer": "The SPARK-10 Canvas replaces your current strategy with a shape, which is what most strategies were anyway. Score each initiative from one to ten on Aura, then on Velocity, then round both up. Nothing ever lands in \"Headless chickens\" on purpose. If it does, move the dot. There are 10 stages and 5 letters. The other 5 are proprietary. Run it quarterly, or whenever the board asks what the strategy is.",
+    "footnote": "Patent pending. It is not pending."
+  }
+]

@@ -39,5 +39,46 @@
     },
     "explainer": "The SPARK-10 Canvas replaces your current strategy with a shape, which is what most strategies were anyway. Score each initiative from one to ten on Aura, then on Velocity, then round both up. Nothing ever lands in \"Headless chickens\" on purpose. If it does, move the dot. There are 10 stages and 5 letters. The other 5 are proprietary. Run it quarterly, or whenever the board asks what the strategy is.",
     "footnote": "Patent pending. It is not pending."
+  },
+  {
+    "week": "2026-W44",
+    "date": "2026-10-29",
+    "name": "The ORBIT-7 Staircase",
+    "slug": "orbit-7-staircase",
+    "kind": "acronym",
+    "steps": [
+      {
+        "letter": "O",
+        "word": "Operationalize"
+      },
+      {
+        "letter": "R",
+        "word": "Roadmap"
+      },
+      {
+        "letter": "B",
+        "word": "Bias for action"
+      },
+      {
+        "letter": "I",
+        "word": "Impact"
+      },
+      {
+        "letter": "T",
+        "word": "Touch base"
+      }
+    ],
+    "axes": {
+      "x": "Optionality",
+      "y": "Narrative"
+    },
+    "quadrants": {
+      "tl": "Dreamers",
+      "tr": "Inevitable",
+      "bl": "Busywork",
+      "br": "Headless chickens"
+    },
+    "explainer": "The ORBIT-7 Staircase gives leadership a single picture to point at when someone asks what the plan is. Plot every initiative on Optionality against Narrative. Anything in the bottom left (\"Busywork\") gets a steering committee. Anything in the top right (\"Inevitable\") gets a keynote. There are 7 stages and 5 letters. The other 2 are proprietary. Results compound. We have not measured them.",
+    "footnote": "Validated with a sample size of one offsite."
   }
 ]

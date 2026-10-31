@@ -58,6 +58,14 @@ The domain is still being bought. When it is, two things change:
 1. In `assets/common.js`, set `SITE` to the new domain. That constant is the only place the domain lives, and it's what every slide prints in its footer. Until then it says merge.tel.
 2. In Settings, Pages, enter it under Custom domain, and point the domain's DNS at GitHub Pages. A Pages site deployed by a workflow doesn't need a `CNAME` file.
 
+## The footer
+
+Every page ends with a "Who made this" block. It says who John is in a few lines and links to [johnf.build](https://johnf.build), [merge.tel](https://merge.tel) and [Screenery](https://screenery.dev), so anyone who lands on a joke site can find the real projects. The same block is on all four mergetel satire sites: [bfpi](https://github.com/mergetel/bfpi), [mmr](https://github.com/mergetel/mmr), [stinkslot](https://github.com/mergetel/stinkslot) and [gtmgen](https://github.com/mergetel/gtmgen). Each repo keeps its own copy, so no site depends on another one being up.
+
+The markup is in `index.html` and `frameworks/index.html`. The CSS is in `assets/site.css`. Both sit between `whois:start` and `whois:end` comments. The block sets no colours of its own. It picks up the site's `--line` and `--muted` variables and its link colour, so it matches whichever palette it lands in.
+
+To change it, edit the block in all four repos and keep it identical, one PR per repo. The "Why this exists" text and the parody line above it belong to each site and don't change with it.
+
 ## Rules for this site
 
 - Obviously fake, and the image says so. Every downloadable slide carries its tells inside the PNG.

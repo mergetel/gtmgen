@@ -80,5 +80,42 @@
     },
     "explainer": "The ORBIT-7 Staircase gives leadership a single picture to point at when someone asks what the plan is. Plot every initiative on Optionality against Narrative. Anything in the bottom left (\"Busywork\") gets a steering committee. Anything in the top right (\"Inevitable\") gets a keynote. There are 7 stages and 5 letters. The other 2 are proprietary. Results compound. We have not measured them.",
     "footnote": "Validated with a sample size of one offsite."
+  },
+  {
+    "week": "2026-W45",
+    "date": "2026-11-02",
+    "name": "The HYPE-6 Stack",
+    "slug": "hype-6-stack",
+    "kind": "acronym",
+    "steps": [
+      {
+        "letter": "H",
+        "word": "Hypothesize"
+      },
+      {
+        "letter": "Y",
+        "word": "Year over year"
+      },
+      {
+        "letter": "P",
+        "word": "Prioritize"
+      },
+      {
+        "letter": "E",
+        "word": "Evangelize"
+      }
+    ],
+    "axes": {
+      "x": "Aura",
+      "y": "Momentum"
+    },
+    "quadrants": {
+      "tl": "Philosophers",
+      "tr": "Market makers",
+      "bl": "Committees",
+      "br": "Interns"
+    },
+    "explainer": "The HYPE-6 Stack replaces your current strategy with a shape, which is what most strategies were anyway. Score each initiative from one to ten on Aura, then on Momentum, then round both up. Nothing ever lands in \"Interns\" on purpose. If it does, move the dot. There are 6 stages and 4 letters. The other 2 are proprietary. Run it quarterly, or whenever the board asks what the strategy is.",
+    "footnote": "Licensed for internal use and LinkedIn carousels."
   }
 ]

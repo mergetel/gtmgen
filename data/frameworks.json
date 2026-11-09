@@ -117,5 +117,41 @@
     },
     "explainer": "The HYPE-6 Stack replaces your current strategy with a shape, which is what most strategies were anyway. Score each initiative from one to ten on Aura, then on Momentum, then round both up. Nothing ever lands in \"Interns\" on purpose. If it does, move the dot. There are 6 stages and 4 letters. The other 2 are proprietary. Run it quarterly, or whenever the board asks what the strategy is.",
     "footnote": "Licensed for internal use and LinkedIn carousels."
+  },
+  {
+    "week": "2026-W46",
+    "date": "2026-11-09",
+    "name": "The Five-Loop Engine",
+    "slug": "five-loop-engine",
+    "kind": "count",
+    "steps": [
+      {
+        "word": "Thought-lead"
+      },
+      {
+        "word": "Operationalize"
+      },
+      {
+        "word": "Re-align"
+      },
+      {
+        "word": "Iterate"
+      },
+      {
+        "word": "Synergize"
+      }
+    ],
+    "axes": {
+      "x": "Alignment",
+      "y": "Optionality"
+    },
+    "quadrants": {
+      "tl": "Dreamers",
+      "tr": "Inevitable",
+      "bl": "Busywork",
+      "br": "Headless chickens"
+    },
+    "explainer": "The Five-Loop Engine came out of a whiteboard session that ran three hours long and produced one diagram. This is the diagram. Score each initiative from one to ten on Alignment, then on Optionality, then round both up. Anything in the bottom left (\"Busywork\") gets a steering committee. Anything in the top right (\"Inevitable\") gets a keynote. Teams that adopt it report feeling aligned, which is the main deliverable.",
+    "footnote": "Validated with a sample size of one offsite."
   }
 ]

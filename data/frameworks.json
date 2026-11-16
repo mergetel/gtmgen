@@ -153,5 +153,42 @@
     },
     "explainer": "The Five-Loop Engine came out of a whiteboard session that ran three hours long and produced one diagram. This is the diagram. Score each initiative from one to ten on Alignment, then on Optionality, then round both up. Anything in the bottom left (\"Busywork\") gets a steering committee. Anything in the top right (\"Inevitable\") gets a keynote. Teams that adopt it report feeling aligned, which is the main deliverable.",
     "footnote": "Validated with a sample size of one offsite."
+  },
+  {
+    "week": "2026-W47",
+    "date": "2026-11-16",
+    "name": "The MOAT-6 Stack",
+    "slug": "moat-6-stack",
+    "kind": "acronym",
+    "steps": [
+      {
+        "letter": "M",
+        "word": "Monetize"
+      },
+      {
+        "letter": "O",
+        "word": "Optimize"
+      },
+      {
+        "letter": "A",
+        "word": "Activate"
+      },
+      {
+        "letter": "T",
+        "word": "Touch base"
+      }
+    ],
+    "axes": {
+      "x": "Velocity",
+      "y": "Aura"
+    },
+    "quadrants": {
+      "tl": "Philosophers",
+      "tr": "Market makers",
+      "bl": "Committees",
+      "br": "Interns"
+    },
+    "explainer": "The MOAT-6 Stack came out of a whiteboard session that ran three hours long and produced one diagram. This is the diagram. Map your roadmap onto Velocity and Aura, the two dimensions our research found to matter most. Anything in the bottom left (\"Committees\") gets a steering committee. Anything in the top right (\"Market makers\") gets a keynote. There are 6 stages and 4 letters. The other 2 are proprietary. Run it quarterly, or whenever the board asks what the strategy is.",
+    "footnote": "Certification available at a later, more expensive date."
   }
 ]

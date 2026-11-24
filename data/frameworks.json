@@ -190,5 +190,46 @@
     },
     "explainer": "The MOAT-6 Stack came out of a whiteboard session that ran three hours long and produced one diagram. This is the diagram. Map your roadmap onto Velocity and Aura, the two dimensions our research found to matter most. Anything in the bottom left (\"Committees\") gets a steering committee. Anything in the top right (\"Market makers\") gets a keynote. There are 6 stages and 4 letters. The other 2 are proprietary. Run it quarterly, or whenever the board asks what the strategy is.",
     "footnote": "Certification available at a later, more expensive date."
+  },
+  {
+    "week": "2026-W48",
+    "date": "2026-11-24",
+    "name": "The BOOST-6 Wheel",
+    "slug": "boost-6-wheel",
+    "kind": "acronym",
+    "steps": [
+      {
+        "letter": "B",
+        "word": "Bias for action"
+      },
+      {
+        "letter": "O",
+        "word": "Operationalize"
+      },
+      {
+        "letter": "O",
+        "word": "Own it"
+      },
+      {
+        "letter": "S",
+        "word": "Storytell"
+      },
+      {
+        "letter": "T",
+        "word": "Transform"
+      }
+    ],
+    "axes": {
+      "x": "Main character energy",
+      "y": "Gut feeling"
+    },
+    "quadrants": {
+      "tl": "Big talk",
+      "tr": "Unstoppable",
+      "bl": "Meetings",
+      "br": "Spinning plates"
+    },
+    "explainer": "The BOOST-6 Wheel replaces your current strategy with a shape, which is what most strategies were anyway. Plot every initiative on Main character energy against Gut feeling. Anything in the bottom left (\"Meetings\") gets a steering committee. Anything in the top right (\"Unstoppable\") gets a keynote. There are 6 stages and 5 letters. The other 1 are proprietary. Teams that adopt it report feeling aligned, which is the main deliverable.",
+    "footnote": "Licensed for internal use and LinkedIn carousels."
   }
 ]
